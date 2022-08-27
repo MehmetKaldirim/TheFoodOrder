@@ -1,6 +1,6 @@
 import classes from "./Checkout.module.css";
 
-const Checkout = (prop) => {
+const Checkout = (props) => {
   return (
     <form>
       <div className={classes.contro}>
@@ -19,6 +19,9 @@ const Checkout = (prop) => {
         <label htmlFor="city">City</label>
         <input type="text" id="city" />
       </div>
+      <button type="button" onClick={props.onCancel}>
+        Cancel
+      </button>
       <button>Submit</button>
     </form>
   );
